@@ -119,9 +119,9 @@ kbd {
 }
 
 header {
-  width:470px; // originally 270px
+  width:470px;
   float:left;
-  position:fixed;
+  position:relative;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
