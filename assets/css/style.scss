@@ -8,3 +8,56 @@
   max-width: 80%;
   border-radius: 15%;
 }
+// My own styles for the sticky navigation bar
+.content-nav {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff; // Gives the nav a solid background
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 15px; // Adds some padding for better spacing
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 25px;
+  z-index: 10; // Ensures the nav stays on top of other content
+}
+
+.content-nav a {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+// .content-nav {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .content-nav a {
+//   margin: 0 10px;
+// }
+
+.social-media-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.social-media-list li {
+  margin: 0 10px;
+}
+
+.social-media-list img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-media-list div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}

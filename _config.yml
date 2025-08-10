@@ -1,6 +1,17 @@
 title: Gerard Morales Riera
 logo: /assets/img/profile_geri.jpg
 description: Aerospace and Physics graduate.
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
+
+# Social media links and location
+social_media_links:
+  show: true
+  location: Spain
+  linkedin:
+    url: https://www.linkedin.com/in/gerard-morales-riera-417186229
+    name: gerard-morales-riera
+  github:
+    url: https://github.com/GerardMR12
+    name: GerardMR12
