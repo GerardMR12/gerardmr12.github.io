@@ -40,7 +40,7 @@ In addition, I focused on the comprehension of **transformer-based architectures
 
 The results demonstrated the potential of using advanced reinforcement learning techniques for real-world satellite operations, paving the way for more efficient, intelligent and reactive Earth observation constellations.
 
-Coding was in Python, with self-made [environment](https://github.com/GerardMR12/earth-gym.git) and **Ansys STK12** (Texas A&M license) as orbit propagator. For ML tasks, **PyTorch** was [used](https://github.com/GerardMR12/ppo-eos.git).
+Coding was in Python, with self-made [environment](https://github.com/GerardMR12/earth-gym.git) and Ansys STK12 (Texas A&M license) as orbit propagator. For ML tasks, PyTorch was [used](https://github.com/GerardMR12/ppo-eos.git).
 
 # UPC ecoRacing
 
