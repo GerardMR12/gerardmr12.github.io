@@ -7,6 +7,8 @@
 .profile-picture {
   max-width: 80%;
   border-radius: 15%;
+  border: 2px solid #267CB9; // Adds a border around the profile picture
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); // Adds a subtle shadow for depth
 }
 // My own styles for the sticky navigation bar
 .content-nav {
@@ -27,15 +29,6 @@
   margin-right: 20px;
   font-weight: bold;
 }
-
-// .content-nav {
-//   display: flex;
-//   flex-direction: row;
-// }
-
-// .content-nav a {
-//   margin: 0 10px;
-// }
 
 .social-media-list {
   display: flex;
@@ -60,4 +53,23 @@
   flex-direction: row;
   gap: 10px;
   align-items: center;
+}
+
+.default-image-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  img {
+    border-radius: 15px; /* Adjust the radius as you like */
+    width: 100%;
+  }
+
+  em {
+    margin: 0px;
+    padding: 0px;
+    font-style: italic;
+  }
 }
