@@ -1,0 +1,30 @@
+[
+  {
+    "id": "intro",
+    "title": "Introduction",
+    "date": "2002-06-07",
+    "file": "posts/intro.md",
+    "type": "featured"
+  },
+  {
+    "id": "degree-thesis",
+    "title": "Degree Thesis",
+    "date": "2025-04-30",
+    "file": "posts/degree-thesis.md",
+    "type": "project"
+  },
+  {
+    "id": "ecoracing",
+    "title": "UPC ecoRacing",
+    "date": "2023-05-15",
+    "file": "posts/ecoracing.md",
+    "type": "project"
+  },
+  {
+    "id": "blog-post-1",
+    "title": "First Blog Post",
+    "date": "2026-03-16",
+    "file": "posts/blog-1.md",
+    "type": "blog"
+  }
+]
