@@ -3,7 +3,7 @@
 A minimal, modern, and fast portfolio website.
 
 ## Features
-- **Markdown-Driven Content**: Blog posts and project entries are written in Markdown in the `posts/` directory.
+- **Markdown-Driven Content**: Essay posts and project entries are written in Markdown in the `posts/` directory.
 - **Dynamic Rendering**: `marked.js` is used to parse and render Markdown on the fly.
 - **Minimal Design**: Focused on typography and ease of reading.
 - **Zero Build Step**: No Jekyll, Ruby, or complex framework needed.
@@ -18,7 +18,7 @@ A minimal, modern, and fast portfolio website.
 - `assets/img/`: Images and GIFs.
 
 ## How to use
-To add a new project or blog post:
+To add a new project or essay post:
 1. Create a `.md` file in the `posts/` folder.
 2. Add its details (id, title, date, file path) to `posts.json`.
 

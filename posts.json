@@ -21,10 +21,10 @@
     "type": "project"
   },
   {
-    "id": "blog-post-1",
-    "title": "First Blog Post",
+    "id": "essay-post-1",
+    "title": "First Essay Post",
     "date": "2026-03-16",
-    "file": "posts/blog-1.md",
-    "type": "blog"
+    "file": "posts/essay-1.md",
+    "type": "essay"
   }
 ]
