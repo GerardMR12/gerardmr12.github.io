@@ -58,12 +58,12 @@ async function loadPage(page) {
                                      .join('');
             content.innerHTML += projectsHtml;
 
-        } else if (page === 'essay') {
-            content.innerHTML = '<h1>Essay</h1>';
-            const essayHtml = posts.filter(p => p.type === 'essay')
-                                 .map(p => createProjectCard(p, 'essay'))
+        } else if (page === 'essays') {
+            content.innerHTML = '<h1>Essays</h1>';
+            const essaysHtml = posts.filter(p => p.type === 'essay')
+                                 .map(p => createProjectCard(p, 'essays'))
                                  .join('');
-            content.innerHTML += essayHtml || '<p>Coming soon!</p>';
+            content.innerHTML += essaysHtml || '<p>Coming soon!</p>';
         }
     } catch (error) {
         console.error('Error loading content:', error);
