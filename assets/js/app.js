@@ -1,12 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadPage('home');
+    handleRoute(window.location.hash || '#home');
     initTheme();
 });
+
+window.addEventListener('hashchange', () => {
+    handleRoute(window.location.hash);
+});
+
+function handleRoute(hash) {
+    if (!hash || hash === '#' || hash === '#home') {
+        renderPage('home');
+    } else if (hash === '#projects') {
+        renderPage('projects');
+    } else if (hash === '#essays') {
+        renderPage('essays');
+    } else if (hash.startsWith('#post/')) {
+        // Format: #post/{backPage}/{file...}
+        const rest = hash.slice('#post/'.length);
+        const slashIdx = rest.indexOf('/');
+        if (slashIdx !== -1) {
+            const backPage = rest.slice(0, slashIdx);
+            const file = 'posts/' + rest.slice(slashIdx + 1);
+            renderPost(file, backPage);
+        } else {
+            renderPage('home');
+        }
+    } else {
+        renderPage('home');
+    }
+}
+
+// Navigation: update URL (triggers hashchange → handleRoute)
+function loadPage(page) {
+    window.location.hash = page;
+}
+
+function loadPost(file, backPage) {
+    const slug = file.replace(/^posts\//, '');
+    window.location.hash = `post/${backPage}/${slug}`;
+}
 
 function initTheme() {
     const themeToggle = document.getElementById('theme-toggle');
     if (!themeToggle) return;
-    
+
     if (document.documentElement.getAttribute('data-theme') === 'dark') {
         themeToggle.textContent = '☀️';
     } else {
@@ -27,7 +64,7 @@ function initTheme() {
     });
 }
 
-async function loadPage(page) {
+async function renderPage(page) {
     const content = document.getElementById('content');
     content.innerHTML = '<p>Loading...</p>';
     content.classList.remove('fade-in');
@@ -45,11 +82,11 @@ async function loadPage(page) {
             if (!mdResponse.ok) throw new Error(`HTTP error! status: ${mdResponse.status}`);
             const mdText = await mdResponse.text();
             content.innerHTML = marked.parse(mdText);
-            
+
             content.innerHTML += '<h2>Recent Projects</h2>';
             const projects = posts.filter(p => p.type === 'project').slice(0, 2);
             content.innerHTML += projects.map(p => createSummaryCard(p, 'projects')).join('');
-            content.innerHTML += `<p><a href="#" onclick="loadPage('projects')">View all projects &rarr;</a></p>`;
+            content.innerHTML += `<p><a href="#projects">View all projects &rarr;</a></p>`;
 
         } else if (page === 'projects') {
             content.innerHTML = '<h1>Projects</h1>';
@@ -89,7 +126,7 @@ function createProjectCard(post, type) {
     `;
 }
 
-async function loadPost(file, backPage) {
+async function renderPost(file, backPage) {
     const content = document.getElementById('content');
     content.innerHTML = '<p>Loading...</p>';
     content.classList.remove('fade-in');
@@ -100,7 +137,7 @@ async function loadPost(file, backPage) {
         const response = await fetch(file);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const mdText = await response.text();
-        content.innerHTML = `<a href="#" onclick="loadPage('${backPage}')" style="display:inline-block; margin-bottom: 1.5rem; text-decoration: none; color: var(--secondary);">&larr; Back to ${backPage.charAt(0).toUpperCase() + backPage.slice(1)}</a>`;
+        content.innerHTML = `<a href="#${backPage}" style="display:inline-block; margin-bottom: 1.5rem; text-decoration: none; color: var(--secondary);">&larr; Back to ${backPage.charAt(0).toUpperCase() + backPage.slice(1)}</a>`;
         content.innerHTML += marked.parse(mdText);
         window.scrollTo(0, 0);
     } catch (error) {
