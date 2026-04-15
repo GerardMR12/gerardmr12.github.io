@@ -7,6 +7,13 @@
     "type": "featured"
   },
   {
+    "id": "voice-models",
+    "title": "Voice Models",
+    "date": "2026-04-15",
+    "file": "posts/voice-models.md",
+    "type": "project"
+  },
+  {
     "id": "degree-thesis",
     "title": "Degree Thesis",
     "date": "2025-04-30",
