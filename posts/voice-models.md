@@ -4,7 +4,7 @@ For a while now, I've been interested in the creation of voice models. They have
 
 I decided to delve a little into the theory behind these and try to **create a text-to-speech (TTS) model from scratch** using deep learning techniques.
 
-For this reason, I trained locally some transformer-based architecture models on the [Libritts-R dataset (clean 100 + clean 360)](https://www.openslr.org/141/), which consists on 240 hours of high-quality English speech data from multiple speakers.
+For this reason, I trained locally some transformer-based architecture models on the [Libritts-R dataset (clean 100 + clean 360 + other 500)](https://www.openslr.org/141/), which consists on 555 hours of high-quality English speech data from multiple speakers.
 
 Here are the results of a generation with a model of 22M parameters trained for about 24 hours on a single, local GPU:
 
