@@ -6,11 +6,11 @@ I decided to delve a little into the theory behind these and try to **create a t
 
 For this reason, I trained locally some transformer-based architecture models on the [Libritts-R dataset (clean 100 + clean 360)](https://www.openslr.org/141/), which consists on 240 hours of high-quality English speech data from multiple speakers.
 
-Here are the results of a generation with a model of 30M parameters trained for about 24 hours on a single, local GPU:
+Here are the results of a generation with a model of 22M parameters trained for about 24 hours on a single, local GPU:
 
 <div style="text-align: center;">
   <audio controls>
-    <source src="./assets/audio/good_speech_geri.wav" type="audio/mpeg">
+    <source src="./assets/audio/example-speech.wav" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   <p><em>Sample generation with a custom prompt.</em></p>
