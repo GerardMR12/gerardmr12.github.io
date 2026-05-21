@@ -1,5 +1,7 @@
 # Portfolio - Gerard Morales Riera
 
+**Live site:** [gerardmr12.github.io](https://gerardmr12.github.io)
+
 A minimal, modern, and fast portfolio website.
 
 ## Features
