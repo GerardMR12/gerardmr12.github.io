@@ -16,7 +16,7 @@ Here are the results of a generation with a model of 22M parameters trained for 
   <p><em>Sample generation with a custom prompt.</em></p>
 </div>
 
-As can be inferred from the audio, the generated voice is still quite robotic and lacks naturalness. However, it is a good level of speech generation that has been achieved after many experiments and algorithm improvements. The first models I trained were truly robotic and had a lot of noise and artifacts. Scaling upd the model size and training time, I believe that very well-sounding voices can be achieved with this approach.
+As can be inferred from the audio, the generated voice is still quite robotic and lacks naturalness. However, it is a good level of speech generation that has been achieved after many experiments and algorithm improvements. The first models I trained were truly robotic and had a lot of noise and artifacts. Scaling up the model size and training time, I believe that very well-sounding voices can be achieved with this approach.
 
 Another factor to be considered is that the model is trained to be a voice cloner. Most voice models are trained to generate a fixed set of voices, but I wanted to create a model that can generate any voice given a short sample of it. This is a much more challenging task, as the model has to learn to generalize to unseen voices and adapt to their characteristics. I was inspired to pursue voice cloning by [ElevenLabs's](https://elevenlabs.io/) splendid voice models.
 

@@ -7,6 +7,13 @@
     "type": "featured"
   },
   {
+    "id": "mms",
+    "title": "Mission Management System",
+    "date": "2026-06-25",
+    "file": "posts/mms.md",
+    "type": "project"
+  },
+  {
     "id": "voice-models",
     "title": "Voice Models",
     "date": "2026-04-15",
